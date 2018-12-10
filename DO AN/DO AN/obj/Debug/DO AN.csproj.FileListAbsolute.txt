@@ -8,3 +8,13 @@ C:\Users\HOME\source\repos\DO AN\DO AN\bin\Debug\DO AN.exe
 C:\Users\HOME\source\repos\DO AN\DO AN\bin\Debug\DO AN.pdb
 C:\Users\HOME\source\repos\DO AN\DO AN\obj\Debug\DO AN.exe
 C:\Users\HOME\source\repos\DO AN\DO AN\obj\Debug\DO AN.pdb
+C:\Users\HOME\Documents\GitHub\DO_AN_NEW\DO AN\DO AN\bin\Debug\DO AN.exe.config
+C:\Users\HOME\Documents\GitHub\DO_AN_NEW\DO AN\DO AN\bin\Debug\DO AN.exe
+C:\Users\HOME\Documents\GitHub\DO_AN_NEW\DO AN\DO AN\bin\Debug\DO AN.pdb
+C:\Users\HOME\Documents\GitHub\DO_AN_NEW\DO AN\DO AN\obj\Debug\DO AN.csprojAssemblyReference.cache
+C:\Users\HOME\Documents\GitHub\DO_AN_NEW\DO AN\DO AN\obj\Debug\DO_AN.Form1.resources
+C:\Users\HOME\Documents\GitHub\DO_AN_NEW\DO AN\DO AN\obj\Debug\DO_AN.Properties.Resources.resources
+C:\Users\HOME\Documents\GitHub\DO_AN_NEW\DO AN\DO AN\obj\Debug\DO AN.csproj.GenerateResource.cache
+C:\Users\HOME\Documents\GitHub\DO_AN_NEW\DO AN\DO AN\obj\Debug\DO AN.csproj.CoreCompileInputs.cache
+C:\Users\HOME\Documents\GitHub\DO_AN_NEW\DO AN\DO AN\obj\Debug\DO AN.exe
+C:\Users\HOME\Documents\GitHub\DO_AN_NEW\DO AN\DO AN\obj\Debug\DO AN.pdb

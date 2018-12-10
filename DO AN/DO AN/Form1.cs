@@ -85,37 +85,7 @@ namespace DO_AN
             int n = int.Parse(thoigian.Text.Trim());
             return n;
         }
-        //private void DiChuyen(int vt1, int vt2)
-        //{
-        //    Status st = new Status();
-        //    st.Vt1 = vt1;
-        //    st.Vt2 = vt2;
-        //    st.Type = LoaiDiChuyen.DI_LEN_DI_XUONG;
-        //    for (int x = 0; x < HEIGHT; x++)
-
-        //    {
-
-        //        backgroundWorker1.ReportProgress(0, st);
-        //        System.Threading.Thread.Sleep(speed());
-        //    }
-        //    st.Type = LoaiDiChuyen.QUA_PHAI_QUA_TRAI;
-        //    int WIDTH = Math.Abs(vt1 - vt2) * (SIZE + KHOANGCACHNUT);
-        //    for (int x = 0; x < WIDTH; x++)
-        //    {
-        //        backgroundWorker1.ReportProgress(0, st);
-        //        System.Threading.Thread.Sleep(speed());
-        //    }
-        //    st.Type = LoaiDiChuyen.DI_XUONG_DI_LEN;
-        //    for (int x = 0; x < HEIGHT; x++)
-        //    {
-        //        backgroundWorker1.ReportProgress(0, st);
-        //        System.Threading.Thread.Sleep(speed());
-        //    }
-
-        //    st.Type = LoaiDiChuyen.DUNG;
-        //    backgroundWorker1.ReportProgress(0, st);
-        //    System.Threading.Thread.Sleep(speed());
-        //}
+        
         private void VENUT_Click(object sender, EventArgs e)
         {
             Node Head = new Node();
@@ -140,7 +110,36 @@ namespace DO_AN
                 Mn[i] = btn;
             }
         }
-         Node Merge1(Node h1,Node h2)
+        private void DiChuyen(int VITRI1, int VITRI2)
+        {
+            Status st = new Status();
+            st.VITRI1 = VITRI1;
+            st.VITRI2 = VITRI2;
+            st.Type = LoaiDiChuyen.len_xuong;
+            for (int x = 0; x < HEIGHT; x++)
+            {
+                backgroundWorker1.ReportProgress(0, st);
+                System.Threading.Thread.Sleep(speed());
+            }
+            st.Type = LoaiDiChuyen.right_left;
+            int WIDTH = Math.Abs(VITRI1 - VITRI2) * (SIZE + KHOANGCACHNUT);
+            for (int x = 0; x < WIDTH; x++)
+            {
+                backgroundWorker1.ReportProgress(0, st);
+                System.Threading.Thread.Sleep(speed());
+            }
+            st.Type = LoaiDiChuyen.xuong_len;
+            for (int x = 0; x < HEIGHT; x++)
+            {
+                backgroundWorker1.ReportProgress(0, st);
+                System.Threading.Thread.Sleep(speed());
+            }
+
+            st.Type = LoaiDiChuyen.stop;
+            backgroundWorker1.ReportProgress(0, st);
+            System.Threading.Thread.Sleep(speed());
+        }
+        Node Merge1(Node h1,Node h2)
         {
             Node t1 = new Node();
             Node t2 = new Node();
@@ -230,6 +229,27 @@ namespace DO_AN
             // Hợp nhất hai phần của danh sách thành một phần được sắp xếp.
             head = Merge1(first, second);
         }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            MergeSort1(Head);
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            MessageBox.Show("Đã Xếp Xong !!!");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            backgroundWorker1.RunWorkerAsync();
+        }
+
         //Node Merge2(Node h1, Node h2)
         //{
         //    Node t1 = new Node();
@@ -320,6 +340,7 @@ namespace DO_AN
         //    // Hợp nhất hai phần của danh sách thành một phần được sắp xếp.
         //    head = Merge2(first, second);
         //}
+
     }
    
 }

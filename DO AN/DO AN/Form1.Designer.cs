@@ -44,6 +44,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.MANHINH = new System.Windows.Forms.Panel();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // label1
@@ -154,7 +155,7 @@
             // 
             // VENUT
             // 
-            this.VENUT.Cursor = System.Windows.Forms.Cursors.NoMove2D;
+            this.VENUT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.VENUT.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.VENUT.ForeColor = System.Drawing.Color.Transparent;
             this.VENUT.Location = new System.Drawing.Point(423, 65);
@@ -194,6 +195,7 @@
             this.button4.TabIndex = 14;
             this.button4.Text = "BẮT ĐẦU";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // MANHINH
             // 
@@ -201,6 +203,12 @@
             this.MANHINH.Name = "MANHINH";
             this.MANHINH.Size = new System.Drawing.Size(1160, 241);
             this.MANHINH.TabIndex = 15;
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
             // Form1
             // 
@@ -251,6 +259,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel MANHINH;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
